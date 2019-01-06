@@ -4,7 +4,7 @@ import Counter from "./components/Counter";
 import CounterStore from "./CounterStore";
 import Dispatcher from "./Dispatcher";
 
-const ctx : [CounterStore, Dispatcher] = [new CounterStore(), new Dispatcher()];
+const ctx: [CounterStore, Dispatcher] = [new CounterStore(), new Dispatcher()];
 
 export const useDispatcher: () => [CounterStore, Dispatcher] =
     () => {
