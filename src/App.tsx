@@ -1,6 +1,7 @@
 import React, {} from "react";
 import "./App.css";
 import Counter from "./components/Counter";
+import Knob from "./components/Knob"
 import CounterStore from "./CounterStore";
 import Dispatcher from "./Dispatcher";
 
@@ -12,9 +13,11 @@ export const useDispatcher: () => [CounterStore, Dispatcher] =
     };
 
 function App() {
+    let scale = 0.5;
     return (
-        <div className={"App"}>
-            <Counter />
+        <div className={"App"} style={{transform: `scale(${scale},${scale})`}}>
+            <Knob />
+            <Knob />
         </div>
     );
 }

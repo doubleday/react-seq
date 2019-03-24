@@ -18,7 +18,7 @@ function MyCounter(props: IMyCounterProps) {
 
 const Counter = observer(() => {
     const [store, dispatcher] = useDispatcher();
-    const onIncrement = () => dispatcher.dispatch(store, {type: "Increment"});
+    const onIncrement = () => dispatcher.dispatch(store, {kind: "Increment"});
     return (
         <MyCounter clickCount={store.currentCount} onIncrement={onIncrement} />
     );
